@@ -1,0 +1,39 @@
+schemaVersion: 2.1.0
+metadata:
+  name: bash
+components:
+  - name: tools
+    container:
+      image: quay.io/devfile/universal-developer-image:ubi8-d433ed6
+      memoryLimit: 3Gi
+
+  # - mountSources: true
+  #   command:
+  #     - tail
+  #   args:
+  #     - '-f'
+  #     - /dev/null
+  #   memoryLimit: 64Mi
+  #   type: dockerimage
+  #   alias: dev
+  #   image: 'registry.access.redhat.com/ubi8-minimal:8.3'
+
+  # - id: mads-hartmann/bash-ide-vscode/latest
+  #   type: chePlugin
+  # - id: rogalmic/bash-debug/latest
+  #   type: chePlugin
+  # - id: timonwong/shellcheck/latest
+  #   preferences:
+  #     shellcheck.executablePath: /bin/shellcheck
+  #   type: chePlugin
+commands:
+  - id: run-main-script
+    exec:
+      label: "Run main.sh script"
+      component: tools
+      workingDir: '${PROJECTS_ROOT}/bash'
+      commandLine: |
+        ./main.sh
+      group:
+        kind: run
+        isDefault: true
