@@ -31,7 +31,7 @@ commands:
     exec:
       label: "Run main.sh script"
       component: tools
-      workingDir: '${PROJECTS_ROOT}/bash'
+      workingDir: '${PROJECTS_ROOT}/bash-1'
       commandLine: |
         ./main.sh
       group:
