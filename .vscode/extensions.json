@@ -3,7 +3,6 @@
     // for the documentation about the extensions.json format
     "recommendations": [
         "rogalmic.bash-debug",
-        "timonwong.shellcheck",
-        "mads-hartmann.bash-ide"
+        "timonwong.shellcheck"
     ]
 }
