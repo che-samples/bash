@@ -6,7 +6,7 @@
         "request": "launch",
         "name": "Bash-Debug main.sh",
         "cwd": "${workspaceFolder}",
-        "program": "${workspaceFolder}/bash/main.sh"
+        "program": "${workspaceFolder}/main.sh"
       }
     ]
 }
