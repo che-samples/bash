@@ -2,12 +2,7 @@ schemaVersion: 2.1.0
 metadata:
   name: bash
 components:
-  - attributes:
-      app.kubernetes.io/name: tools
-      che-theia.eclipse.org/vscode-preferences:
-        shellcheck.executablePath: /usr/local/bin/shellcheck
-    name: tools
-    container:
+  -  container:
       image: quay.io/aandriienko/universal:test 
       memoryLimit: 3Gi
 
