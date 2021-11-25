@@ -1,0 +1,19 @@
+schemaVersion: 2.1.0
+metadata:
+  name: bash
+components:
+  - name: tools
+    container:
+      image: quay.io/devfile/universal-developer-image:ubi8-latest 
+      memoryLimit: 3Gi
+commands:
+  - id: run-main-script
+    exec:
+      label: "Run main.sh script"
+      component: tools
+      workingDir: '${PROJECTS_ROOT}/bash-1'
+      commandLine: |
+        ./main.sh
+      group:
+        kind: run
+        isDefault: true
